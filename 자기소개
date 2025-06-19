@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>2506009 정수경 - 자기소개</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Malgun Gothic', sans-serif;
+            background-color: #f8f3d2;
+            color: #333;
+        }
+
+        header {
+            background-color: #013e7c;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f3afaf;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffffbb;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1.intro-title {
+            font-size: 36px;
+            color: #2a5d84;
+            border-bottom: 3px solid #2a5d84;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .intro-sub {
+            font-size: 18px;
+            color: #8f8e8e;
+            margin-top: 0;
+        }
+
+        img {
+            width: 220px;
+            height: auto;
+            border-radius: 30%;
+            border: 3px solid #e0e0e0;
+            margin: 20px 0;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: border-color 0.3s; /* 테두리 색 변경 애니메이션 */
+        }
+
+        /* 기본 정보 */
+        .info {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .info p {
+            margin:6px 0;
+        }
+
+        .info a {
+            color: #014d99;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        /* 좋아하는 음식 */
+        h2.food-title {
+            color: #d94a4a;
+            margin-top: 40px;
+        }
+
+        .food-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .food-list li {
+            background-color: #fff0f0;
+            border: 1px solid #ffcccc;
+            color: #d94a4a;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 8px auto;
+            padding: 12px;
+            border-radius: 10px;
+            width: 60%;
+            transition: 0.3s;
+        }
+
+        .food-list li:hover {
+            background-color: #ffe5e5;
+            transform: scale(1.02);
+        }
+
+        /* 연락처 */
+        h2.contact-title {
+            color: #3b7fd4;
+            margin-top: 40px;
+        }
+
+        .contact-box {
+            background-color: #e9f1ff;
+            border: 1px solid #b2d4ff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+            color: #3b7fd4;
+        }
+
+        /* 버튼 */
+        a.button {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #f3afaf;
+            color: #5e5d5d;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer; /* 버튼 느낌 */
+        }
+
+        a.button:hover {
+            background-color: #e2241d;
+            color: white;
+        }
+
+        footer {
+            background-color: #024283;
+            color: white;
+            text-align: center;
+            padding: 20px 50px;
+            margin-top: 50px;
+            font-size: 16px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div><strong>SUKYUNG 홈페이지</strong></div>
+    <nav>
+        <a href="main.html">홈</a>
+        <a href="자기소개.html.html">자기소개</a>
+        <a href="a.html">회원가입</a>
+        <a href="미래인재학부.html">미래인재학부 소개</a>
+        <a href="이벤트리스너.html">이벤트</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="intro-title">자기소개</h1>
+    <p class="intro-sub">한성대 미래인재학부 정수경입니다.</p>
+
+    <img src="sukyung.jpg" alt="정수경 사진" 
+         onmouseover="this.style.borderColor='#004080';" 
+         onmouseout="this.style.borderColor='#f4f9ff';" />
+
+    <div class="info">
+        <p><strong>이름:</strong> 정수경</p>
+        <p><strong>학교:</strong> <a href="https://www.hansung.ac.kr/" target="_blank">한성대학교</a></p>
+        <p><strong>학번:</strong> 2506009</p>
+        <p><strong>생년월일:</strong> 2003년 8월 24일</p>
+        <p><strong>지역:</strong> 경기도 부천시</p>
+        <p><strong>MBTI:</strong> ISTP</p>
+        <p><strong>혈액형:</strong> AB형</p>
+    </div>
+
+    <h2 class="food-title">좋아하는 음식</h2>
+    <ul class="food-list">
+        <li>♡ 초밥</li>
+        <li>♡ 샤브샤브</li>
+        <li>♡ 오겹살</li>
+    </ul>
+
+    <h2 class="contact-title">연락처</h2>
+    <div class="contact-box">
+        <p><strong>전화번호:</strong> 010-9142-4426</p>
+        <p><strong>이메일:</strong> sukkyung030@naver.com</p>
+    </div>
+
+    <a href="a.html" class="button" onclick="alert('회원가입 페이지로 이동합니다!')">회원가입</a>
+</div>
+
+<footer>
+    한성대 미래인재학부 2506009 정수경
+</footer>
+
+</body>
+</html>
