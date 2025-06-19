@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>미래인재학부 소개</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Malgun Gothic', sans-serif;
+            background-color: #f4f9ff;
+        }
+
+        header {
+            background-color: #014d99;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #014d99;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            background-color: #ffffffb7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: #00274D;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        #changeText {
+            color: #333;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div><strong>SUKYUNG 홈페이지</strong></div>
+    <nav>
+        <a href="main.html">홈</a>
+        <a href="자기소개.html.html">자기소개</a>
+        <a href="a.html">회원가입</a>
+        <a href="미래인재학부.html">미래인재학부 소개</a>
+        <a href="이벤트리스너.html">이벤트</a>
+    </nav>
+</header>
+
+<div class="main">
+    <h1>미래인재학부 소개</h1>
+    <p>
+        미래인재학부는 전 산업 분야 신산업 역량을 배양하고 재직자의 AI 역량을 향상시켜 디지털 분야 전문인재 양성을 목적으로 함
+    </p>
+
+    <h2>특징</h2>
+    <ul>
+        <li>사회수요기반의 첨단디지털교육 제공</li>
+        <li>학습자 경험 및 요구 기반의 자기설계전공학부</li>
+        <li>일학습병행 및 융합전공 이수를 위한 온라인 중심 교육운영</li>
+    </ul>
+
+    <button onclick="document.getElementById('result').innerHTML='사진에 마우스를 올려보세요'">
+        비밀메세지
+    </button>
+    <p id="result" style="font-weight: bold; color: #014d99;"></p>
+
+    <img src="hansung.jpg" alt="한성대 로고"
+     width="300"
+     onmouseover="this.src='상상부기.jpg'"
+     onmouseout="this.src='hansung.jpg'">
+
+    <p id="changeText"
+       onmouseover="this.style.color='#013e7c'"
+       onmouseout="this.style.color='#8f8e8e'">
+       미래인재학부 ↓
+    </p>
+
+    <a href="https://futureplus.hansung.ac.kr/ko/department/future">
+        사이트 바로가기
+    </a>
+</div>
+
+<footer>
+    한성대 미래인재학부 2506009 정수경
+</footer>
+
+</body>
+</html>
