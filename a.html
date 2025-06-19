@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fcfbbd;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #014d99;
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        header div {
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #00274D;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        form {
+            width: 400px;
+            margin: 40px auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fefefe;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group label {
+            display: block;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .age-text {
+            margin-top: 5px;
+            font-weight: bold;
+            color: #014d99;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgb(75, 75, 177);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function showAge() {
+            var birth = document.getElementById("birth").value;
+            var year = birth.substring(0, 4);
+            var age = 2025 - year;
+            document.getElementById("ageText").innerHTML = "나이: " + age + "세";
+        }
+
+        function showPopup() {
+            var name = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var birth = document.getElementById("birth").value;
+            var gender = document.getElementById("gender").value;
+            var intro = document.getElementById("intro").value;
+
+            var year = birth.substring(0, 4);
+            var age = 2025 - year;
+
+            var food1 = document.getElementsByName("interest")[0].checked;
+            var food2 = document.getElementsByName("interest")[1].checked;
+            var food3 = document.getElementsByName("interest")[2].checked;
+
+            var food = "";
+            if (food1) { food += "한식 "; }
+            if (food2) { food += "일식 "; }
+            if (food3) { food += "양식 "; }
+
+            alert("회원가입 완료!\n\n" +
+                "이름: " + name + "\n" +
+                "이메일: " + email + "\n" +
+                "전화번호: " + phone + "\n" +
+                "생년월일: " + birth + " (나이 : " + age + "세)\n" +
+                "성별: " + gender + "\n" +
+                "음식 취향: " + food + "\n" +
+                "자기소개: " + intro);
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div>SUKYUNG 홈페이지</div>
+        <nav>
+            <a href="main.html">홈</a>
+            <a href="자기소개.html.html">자기소개</a>
+            <a href="a.html">회원가입</a>
+            <a href="미래인재학부.html">미래인재학부 소개</a>
+            <a href="이벤트리스너.html">이벤트</a>
+        </nav>
+    </header>
+
+    <h1>회원가입 양식</h1>
+
+    <form>
+        <label for="username">이름</label>
+        <input type="text" id="username">
+
+        <label for="email">이메일</label>
+        <input type="email" id="email">
+
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" placeholder="010-0000-0000">
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password">
+
+        <label for="birth">생년월일</label>
+        <input type="date" id="birth" onchange="showAge()">
+        <div id="ageText" class="age-text"></div>
+
+        <label for="gender">성별</label>
+        <select id="gender">
+            <option>남성</option>
+            <option>여성</option>
+            <option>기타</option>
+        </select>
+
+        <label>음식 취향</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="interest"> 한식</label>
+            <label><input type="checkbox" name="interest"> 일식</label>
+            <label><input type="checkbox" name="interest"> 양식</label>
+        </div>
+
+        <label for="intro">자기소개</label>
+        <textarea id="intro" rows="4" placeholder="자기소개 글을 작성해주세요."></textarea>
+
+        <button type="button" onclick="showPopup()">회원가입</button>
+    </form>
+
+    <footer>
+        한성대 미래인재학부 2506009 정수경
+    </footer>
+
+</body>
+</html>
